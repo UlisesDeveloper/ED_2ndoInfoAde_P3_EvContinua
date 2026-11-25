@@ -41,7 +41,7 @@ private:
     list<data<T, U> > datos;
 
     /* Copia el diccionario de entrada en el objeto implicito*/
-    void Copiar(const Diccionario<T, U>& D):
+    void Copiar(const Diccionario<T, U>& D);
 
     /* Borra todos los datos que contiene el diccionario*/
     void Borrar();
@@ -66,16 +66,137 @@ public:
     /**
      *Operador de asignación
      */
-    Diccionario<T, U> & operator=(const Diccionario<T, U> &D);
+    Diccionario<T, U>& operator=(const Diccionario<T, U> &D);
+
+
+    //Explicacion de chat de funcionalidad de typename 
+    /*
+    Because :: is used to access static variables, functions, and inner types alike, 
+    the compiler needs to know which one you are grabbing. Whenever <T> or <T, U> appears to the left of ::, 
+    the compiler can't look inside that template yet to check for itself, 
+    so typename explicitly tells it: "What comes after :: is a datatype, not a variable or a function."
+    
+    
+    typename is not a one-time declaration at the top of a class (that's what template <class T, class U> does)—it is a tag you have to stick directly onto every single line where you write SomethingWithT<T, U>::InnerType
+    */
+
 
     class iterator{
         //Completar el iterador
+        private:
+        typename list<data<T, U>>::iterator iterador;
+        public:
+        iterator(){};
+        iterator(const typename list<data<T,U>>::iterator &a){
+            iterador = a;
+        }
+        iterator(const iterator &a){
+            iterador = a.iterador;
+        }
+        ~iterator(){}
+        iterator& operator=(const iterator& otro){
+            if(this != &otro){
+                iterador=otro.iterador;
+            }
+            return *this;
+        }
+        iterator& operator=(const typename list<data<T,U>>::iterator& otro){
+            
+                iterador=otro;
+            
+            return *this;
+        } 
 
+        data<T, U>& operator*() const{
+            return *iterador;
+        }
+
+        iterator& operator++(){
+            ++iterador;
+            return *this;
+        }
+
+        iterator& operator--(){
+            --iterador;
+            return *this;
+        }
+
+        iterator& operator++(int){
+            iterador++;
+            return *this;
+        }
+        iterator& operator--(int){
+            iterador--;
+            return *this;
+        }
+
+        bool operator!=(const iterator& otro) const{
+            return otro.iterador != iterador;
+        }
+
+        bool operator==(const iterator& otro) const{
+            return otro.iterador == iterador;
+        }
+        friend class Diccionario<T,U>;
 
     };
     class const_iterator{
         //Completar el const_iterator
+        private:
+        typename list<data<T, U>>::const_iterator iterador;
+        public:
+        const_iterator(){};
+        const_iterator(const typename list<data<T,U>>::const_iterator &a){
+            iterador = a;
+        } 
+        const_iterator(const const_iterator &a){
+            iterador = a.iterador;
+        }
+        ~const_iterator(){}
+        const_iterator& operator=(const const_iterator& otro){
+            if(this != &otro){
+                iterador=otro.iterador;
+            }
+            return *this;
+        }
+        const_iterator& operator=(const typename list<data<T,U>>::const_iterator& otro){
+            
+            iterador=otro;
+            
+            return *this;
+        } 
 
+        const data<T, U>& operator*() const{
+            return *iterador;
+        }
+
+        const_iterator& operator++(){
+            ++iterador;
+            return *this;
+        }
+
+        const_iterator& operator--(){
+            --iterador;
+            return *this;
+        }
+
+        const_iterator& operator++(int){
+            iterador++;
+            return *this;
+        }
+        const_iterator& operator--(int){
+            iterador--;
+            return *this;
+        }
+
+        bool operator!=(const const_iterator& otro) const{
+            return otro.iterador != iterador;
+        }
+
+        bool operator==(const const_iterator& otro) const{
+            return otro.iterador == iterador;
+        }
+        friend class Diccionario<T,U>;
     };
 
     /**
