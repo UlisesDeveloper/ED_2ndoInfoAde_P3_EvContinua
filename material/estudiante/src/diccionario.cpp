@@ -1,10 +1,15 @@
+#ifndef _DICCIONARIO_CPP
+#define _DICCIONARIO_CPP
+
+
+
 #include "diccionario.h"
 
 template <class T, class U>
 void Diccionario<T,U>::Copiar(const Diccionario<T, U>& D){
     //supongo que por copiarlo habra que eliminar la lista que ya teniamos
-   if(this == &D){
-        datos = D;
+   if(this != &D){
+        datos = D.datos;
 
     }
 }
@@ -34,6 +39,7 @@ Diccionario<T,U>::~Diccionario(){
 template <class T, class U>
 Diccionario<T, U>& Diccionario<T,U>::operator=(const Diccionario<T, U> &D){
     (*this).Copiar(D);
+    return *this;
 }
 
 template <class T, class U>
@@ -123,17 +129,92 @@ bool Diccionario<T,U>::Borrar(const T & c){
 
 template <class T, class U>
 Diccionario<T,U> Diccionario<T,U>::union_d(const Diccionario<T,U> & D){
-Diccionario<T,U> res = (*this);
-iterator actual;
-for(const_iterator it = D.begin(); it != D.end(); ++it){
-    bool estaClave = res.Esta_Clave((*it).clave, actual);
-    if(estaClave){
-        (*actual).info_asoci.insert((*actual).info_asoci.end(),(*it).info_asoci.begin(), (*it).info_asoci.end());
-    } else {
-        res.datos.insert(actual.iterador,(*it))
+    Diccionario<T,U> res = (*this);
+    iterator actual;
+    for(const_iterator it = D.begin(); it != D.end(); ++it){
+        bool estaClave = res.Esta_Clave((*it).clave, actual);
+        if(estaClave){
+            (*actual).info_asoci.insert((*actual).info_asoci.end(),(*it).info_asoci.begin(), (*it).info_asoci.end());
+        } else {
+            res.datos.insert(actual.iterador,(*it));
+        }
     }
+
+
+    return res;
 }
 
 
-return res;
+template <class T, class U>
+Diccionario<T,U> Diccionario<T,U>::diferencia(const Diccionario<T,U> & D){
+
+    Diccionario<T,U> res = (*this);
+    iterator actual;
+    for(const_iterator it = D.begin(); it != D.end(); ++it){
+        bool estaClave = res.Esta_Clave((*it).clave, actual);
+        if(estaClave){
+            res.datos.erase(actual.iterador);
+        }
+    }
+    return res;
 }
+
+
+template <class T, class U>
+Diccionario<T,U> Diccionario<T,U>::interseccion(const Diccionario<T,U> & D){
+
+    Diccionario<T,U> res;
+    iterator actual;
+    for(const_iterator it = D.begin(); it != D.end(); ++it){
+        bool estaClave = (*this).Esta_Clave((*it).clave, actual);
+        if(estaClave){
+            res.datos.push_back((*actual));
+        }
+    }
+    return res;
+}
+
+
+template <class T, class U>
+Diccionario<T,U> Diccionario<T,U>::Devolver_rango(const T &i, const T & f){
+
+    Diccionario<T,U> res;
+    for (iterator it = datos.begin(); it != datos.end(); ++it) {
+        if ((*it).clave >= i && (*it).clave < f) {
+            res.datos.push_back(*(it));
+        }
+    }
+
+    return res;
+}
+
+
+//necesita typename tambien
+template <class T, class U>
+typename Diccionario<T, U>::iterator Diccionario<T, U>::begin() {
+    
+    return typename Diccionario<T, U>::iterator(datos.begin());
+}
+
+template <class T, class U>
+typename Diccionario<T, U>::iterator Diccionario<T, U>::end() {
+    
+    return typename Diccionario<T, U>::iterator(datos.end());
+}
+
+
+template <class T, class U>
+typename Diccionario<T, U>::const_iterator Diccionario<T, U>::begin() const{
+    
+    return typename Diccionario<T, U>::const_iterator(datos.begin());
+}
+
+
+
+template <class T, class U>
+typename Diccionario<T, U>::const_iterator Diccionario<T, U>::end() const{
+    
+    return typename Diccionario<T, U>::const_iterator(datos.end());
+}
+
+#endif

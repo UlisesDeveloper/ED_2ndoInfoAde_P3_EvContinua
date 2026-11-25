@@ -280,10 +280,13 @@ public:
 
     iterator end();
 
-    const_iterator begin();
+    const_iterator begin() const;
 
-    const_iterator end();
+    const_iterator end() const;
 
 };
 
+
+//cosa de gpt
+#include "../src/diccionario.cpp"
 #endif
