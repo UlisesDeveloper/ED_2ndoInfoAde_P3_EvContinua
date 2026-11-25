@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica. TDAs no lineales"
+OUTPUT_DIRECTORY       = /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/doc_doxygen/
+INPUT                  = /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/doc
+EXTRACT_PRIVATE	       = NO

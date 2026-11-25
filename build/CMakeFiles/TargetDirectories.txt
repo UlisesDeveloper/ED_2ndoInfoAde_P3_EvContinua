@@ -1,0 +1,7 @@
+/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/usodiccionario.dir
+/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/union.dir
+/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/palabras_longitud.dir
+/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/apariciones.dir
+/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/doc_doxygen.dir
+/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/edit_cache.dir
+/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/rebuild_cache.dir

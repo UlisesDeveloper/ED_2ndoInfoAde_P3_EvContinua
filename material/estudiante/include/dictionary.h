@@ -1,6 +1,10 @@
 #ifndef __DICTIONARY_H__
 #define __DICTIONARY_H__
 
+//NOT SURE IF I SHOULD FIX PUTTING THE CONST IN WORDS OF LENGTH
+//getoccurrences
+
+
 #include <set>
 #include <string>
 #include <fstream>
@@ -61,7 +65,7 @@ public:
    * @param length Longitud de las palabras buscadas
    * @return Vector de palabras con la longitud desdeada
    */
-  vector<string> wordsOfLength(int length);
+  vector<string> wordsOfLength(int length); 
 
   /**
    * @brief Indica si una palabra esta en el diccionario o no.
@@ -187,5 +191,9 @@ public:
   const_iterator end()const{const_iterator i = words.end();return i;}
 
 };
+
+
+istream& operator>>(istream &is, Dictionary &dic);
+ostream& operator<<(ostream &os, const Dictionary &dic);
 
 #endif

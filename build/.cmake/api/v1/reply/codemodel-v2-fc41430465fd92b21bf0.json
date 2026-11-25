@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Doxygen::dot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Doxygen__dot-Debug-acf4dee0ac83fb62d46d.json",
+					"name" : "Doxygen::dot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Doxygen::doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Doxygen__doxygen-Debug-82160d4d83b986bef43c.json",
+					"name" : "Doxygen::doxygen",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-fd6451d79dc282e2f566.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "tdas_no_lineales",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "apariciones::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apariciones-Debug-3e3115b71f0e16d84829.json",
+					"name" : "apariciones",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc_doxygen-Debug-925643891905c7d6e677.json",
+					"name" : "doc_doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "palabras_longitud::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-palabras_longitud-Debug-eae1ca4fa2221fd3812f.json",
+					"name" : "palabras_longitud",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "union::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-union-Debug-db960afacdb3fa2037f3.json",
+					"name" : "union",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "usodiccionario::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-usodiccionario-Debug-55e594af6f1b5877ab58.json",
+					"name" : "usodiccionario",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+		"source" : "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}

@@ -1,0 +1,10 @@
+# ninja log v7
+1	14	1795616597370067935	CMakeFiles/usodiccionario.dir/estudiante/src/diccionario.cpp.o	fa066c394d79e598
+4	70	1795616597374067936	CMakeFiles/doc_doxygen	8f21fcf7c173b893
+4	70	1795616597374067936	/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/doc_doxygen	8f21fcf7c173b893
+3	268	1795616597372914907	CMakeFiles/apariciones.dir/estudiante/src/apariciones.cpp.o	9af1e828b78291cb
+2	272	1795616597371067936	CMakeFiles/union.dir/estudiante/src/union.cpp.o	1ac03f2c147523d9
+3	301	1795616597372563399	CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o	c8ac40c45ca85c21
+3	400	1795616597372067936	CMakeFiles/union.dir/estudiante/src/dictionary.cpp.o	8ab02986eba30a5a
+3	400	1795616597372731083	CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o	617df1895520a4d0
+3	407	1795616597373199089	CMakeFiles/apariciones.dir/estudiante/src/dictionary.cpp.o	3658421731b52b76

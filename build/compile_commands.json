@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/usodiccionario.dir/estudiante/src/usodiccionario.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/usodiccionario.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/usodiccionario.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/usodiccionario.dir/estudiante/src/usodiccionario.cpp.o"
+},
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/usodiccionario.dir/estudiante/src/diccionario.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/diccionario.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/diccionario.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/usodiccionario.dir/estudiante/src/diccionario.cpp.o"
+},
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/union.dir/estudiante/src/union.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/union.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/union.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/union.dir/estudiante/src/union.cpp.o"
+},
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/union.dir/estudiante/src/dictionary.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/dictionary.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/dictionary.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/union.dir/estudiante/src/dictionary.cpp.o"
+},
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/palabras_longitud.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/palabras_longitud.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o"
+},
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/dictionary.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/dictionary.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o"
+},
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/apariciones.dir/estudiante/src/apariciones.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/apariciones.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/apariciones.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/apariciones.dir/estudiante/src/apariciones.cpp.o"
+},
+{
+  "directory": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build",
+  "command": "/usr/bin/g++ -I/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/include -g -std=gnu++14 -o CMakeFiles/apariciones.dir/estudiante/src/dictionary.cpp.o -c /home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/dictionary.cpp",
+  "file": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/material/estudiante/src/dictionary.cpp",
+  "output": "/home/ulises/Documents/ugr/2ndo/1er_cuatri/estructuraDatos/practicas/P3_EvContinua/build/CMakeFiles/apariciones.dir/estudiante/src/dictionary.cpp.o"
+}
+]
