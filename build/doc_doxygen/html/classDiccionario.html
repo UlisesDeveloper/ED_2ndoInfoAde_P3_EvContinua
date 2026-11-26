@@ -100,11 +100,17 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adad32f7bfd34b7a8631ff5f26033b369" id="r_adad32f7bfd34b7a8631ff5f26033b369"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adad32f7bfd34b7a8631ff5f26033b369">Diccionario</a> ()</td></tr>
+<tr class="memdesc:adad32f7bfd34b7a8631ff5f26033b369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <br /></td></tr>
 <tr class="memitem:ad8917f4e401b473139403dc5964e8307" id="r_ad8917f4e401b473139403dc5964e8307"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad8917f4e401b473139403dc5964e8307">Diccionario</a> (const <a class="el" href="classDiccionario.html">Diccionario</a> &amp;D)</td></tr>
+<tr class="memdesc:ad8917f4e401b473139403dc5964e8307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de copias.  <br /></td></tr>
 <tr class="memitem:a006b21559ae7e1b449c785fc47dfb04d" id="r_a006b21559ae7e1b449c785fc47dfb04d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a006b21559ae7e1b449c785fc47dfb04d">~Diccionario</a> ()</td></tr>
+<tr class="memdesc:a006b21559ae7e1b449c785fc47dfb04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="memitem:ad30f63b3857757296f1302273ee50a3d" id="r_ad30f63b3857757296f1302273ee50a3d"><td class="memItemLeft"><a class="el" href="classDiccionario.html">Diccionario</a>&lt; T, U &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad30f63b3857757296f1302273ee50a3d">operator=</a> (const <a class="el" href="classDiccionario.html">Diccionario</a>&lt; T, U &gt; &amp;D)</td></tr>
+<tr class="memdesc:ad30f63b3857757296f1302273ee50a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de Asignacion.  <br /></td></tr>
 <tr class="memitem:a0006e0853bc1a46293432a8626f4df3b" id="r_a0006e0853bc1a46293432a8626f4df3b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0006e0853bc1a46293432a8626f4df3b">Esta_Clave</a> (const T &amp;p, typename <a class="el" href="classDiccionario.html">Diccionario</a>&lt; T, U &gt;<a class="el" href="classDiccionario_1_1iterator.html">::iterator</a> &amp;it_out)</td></tr>
+<tr class="memdesc:a0006e0853bc1a46293432a8626f4df3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta_clave busca clave de diccionario.  <br /></td></tr>
 <tr class="memitem:af520b73907852cc8002260ddf9fb822c" id="r_af520b73907852cc8002260ddf9fb822c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af520b73907852cc8002260ddf9fb822c">Insertar</a> (const T &amp;clave, const list&lt; U &gt; &amp;info)</td></tr>
+<tr class="memdesc:af520b73907852cc8002260ddf9fb822c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserta clave en el diccionario.  <br /></td></tr>
 <tr class="memitem:a7e167da231bff610001df3c20cc9b7a7" id="r_a7e167da231bff610001df3c20cc9b7a7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7e167da231bff610001df3c20cc9b7a7">AddSignificado_Palabra</a> (const U &amp;s, const T &amp;p)</td></tr>
 <tr class="memitem:a292817b0fda893a41cd9313b4c65cc61" id="r_a292817b0fda893a41cd9313b4c65cc61"><td class="memItemLeft">list&lt; U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a292817b0fda893a41cd9313b4c65cc61">getInfo_Asoc</a> (const T &amp;p)</td></tr>
 <tr class="memitem:aa576b001759429fd58210ca57257d6f8" id="r_aa576b001759429fd58210ca57257d6f8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa576b001759429fd58210ca57257d6f8">size</a> () const</td></tr>
@@ -138,7 +144,10 @@ template&lt;class T, class U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor por defecto. </p>
 <p>Constructor por defecto </p>
+<p>Constructor por defecto del <a class="el" href="classDiccionario.html">Diccionario</a>, sin funcion se queda vacio </p>
 
 </div>
 </div>
@@ -158,7 +167,16 @@ template&lt;class T, class U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor de copias. </p>
 <p>Constructor de copias </p>
+<p>Constructor de copia, copia los datos de un diccionario a otro</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">D</td><td>diccionario a copiarse en la nueva instancia del diccionario </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -178,7 +196,10 @@ template&lt;class T, class U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destructor. </p>
 <p>Destructor </p>
+<p>Se limpia automaticamente antes de destruirse la instancia </p>
 
 </div>
 </div>
@@ -311,7 +332,18 @@ template&lt;class T, class U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Esta_clave busca clave de diccionario. </p>
 <p>Busca la clave p en el diccionario. p es la clave a buscar. it_out apuntara al elemento con esa clave y en caso contrario de que no este la clave it_out apuntara a donde debería estar. </p>
+<p>Busca la clave p en el diccionario. p es la clave a buscar. it_out apuntara al elemento con esa clave y en caso contrario de que no este la clave it_out apuntara a donde debería estar.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>clave a buscar </td></tr>
+    <tr><td class="paramname">it_out</td><td>apunta al elemento con esa clave </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool de si se encuentra o no </dd></dl>
 
 </div>
 </div>
@@ -355,7 +387,17 @@ template&lt;class T, class U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Inserta clave en el diccionario. </p>
 <p>Inserta un nuevo registro en el diccionario. clave clave usada para insertar en el diccionario info informacion asociada a la clave que se inserta junto con clave el diccionario se supone ordenado, ya que insertar inserta en orden </p>
+<p>Inserta un nuevo registro en el diccionario. clave clave usada para insertar en el diccionario info informacion asociada a la clave que se inserta junto con clave el diccionario se supone ordenado, ya que insertar inserta en orden</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clave</td><td>clave a insertar </td></tr>
+    <tr><td class="paramname">info</td><td>info asociada de la clave a insertar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -395,7 +437,17 @@ template&lt;class T, class U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Operador de Asignacion. </p>
 <p>Operador de asignación </p>
+<p>Copia los datos del diccionario de parametro al nuestro</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">D</td><td>diccionario a copiarse en esta instancia del diccionario </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>referencia a la instancia para permitir encadenar asignaciones </dd></dl>
 
 </div>
 </div>

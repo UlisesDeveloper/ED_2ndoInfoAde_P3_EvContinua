@@ -14,6 +14,15 @@ using namespace std;
 no se repite (DNI p.ej.) y list<U> es una lista de datos (string p.ej) asociados a la clave
 de tipo T. El diccionario está ordenado de menor a mayor clave.
  */
+
+  /**
+   * @brief Estructura de dato del que esta hecho la lista del diccionario
+   *
+   * Tipo elemento que define el diccionario. T es el tipo de dato asociado a una clave que no se repite (DNI p.ej.) y list<U> es una lista de datos (string p.ej) asociados a la clave de tipo T. El diccionario está ordenado de menor a mayor clave.
+   *
+   * @param clave guarda la clave de una entrada
+   * @param info_asoci lista de la informacion asociada a una entrada
+   */
 template <class T, class U>
 struct data {
     T clave;
@@ -25,6 +34,14 @@ struct data {
 /*Comparador de datos. Ordena 2 registros de acuerdo a la clave de tipo T. Puede usarse como
 un funtor.
  */
+/**
+   * @brief Operador de comparacion entre datos de la entradas del diccionario
+   *
+   * Comparador de datos. Ordena 2 registros de acuerdo a la clave de tipo T. Puede usarse como un funtor
+   *
+   * @param d1 primer parametro de comparacion
+   * @param d2 segundo parametro de comparacion
+   */
 template <class T, class U>
 bool operator<(const data<T, U> &d1, const data <T, U>&d2) {
     if (d1.clave < d2.clave)
@@ -37,13 +54,28 @@ bool operator<(const data<T, U> &d1, const data <T, U>&d2) {
 template <class T, class U>
 class Diccionario {
 private:
-
+    /**
+     * @brief Lista de datos (clave, lista de información asociada) ordenados por clave de menor a mayor.
+     */
     list<data<T, U> > datos;
 
     /* Copia el diccionario de entrada en el objeto implicito*/
+    /**
+   * @brief Copia de diccionario
+   *
+   * Copia el diccionario de entrada en el objeto implicito
+   *
+   * @param D diccionario a copiarse
+   */
     void Copiar(const Diccionario<T, U>& D);
 
     /* Borra todos los datos que contiene el diccionario*/
+    /**
+   * @brief Borrado de diccionario
+   *
+   * Borra todos los datos que contiene el diccionario
+   *
+   */
     void Borrar();
 
 public:
@@ -51,21 +83,48 @@ public:
     /**
      *Constructor por defecto
      */
+    /**
+   * @brief Constructor por defecto
+   *
+   * Constructor por defecto del Diccionario, sin funcion se queda vacio
+   *
+   */
     Diccionario();
 
     /**
      *Constructor de copias
      */
+    /**
+   * @brief Constructor de copias
+   *
+   * Constructor de copia, copia los datos de un diccionario a otro 
+   *
+   * @param D diccionario a copiarse en la nueva instancia del diccionario
+   */
     Diccionario(const Diccionario &D);
 
     /**
      * Destructor
      */
+    /**
+   * @brief Destructor 
+   *
+   * Se limpia automaticamente antes de destruirse la instancia 
+   *
+   */
     ~Diccionario();
 
     /**
      *Operador de asignación
      */
+    /**
+   * @brief Operador de Asignacion
+   *
+   * Copia los datos del diccionario de parametro al nuestro
+   *
+   * @param D diccionario a copiarse en esta instancia del diccionario
+   * @return referencia a la instancia para permitir encadenar asignaciones
+   */
     Diccionario<T, U>& operator=(const Diccionario<T, U> &D);
 
 
@@ -204,6 +263,17 @@ public:
       p es la clave a buscar. it_out apuntara al elemento con esa clave y en caso
       contrario de que no este la clave it_out apuntara a donde debería estar.
     */
+   /**
+   * @brief Esta_clave busca clave de diccionario
+   *
+   * Busca la clave p en el diccionario.
+   * p es la clave a buscar. it_out apuntara al elemento con esa clave y en caso
+   * contrario de que no este la clave it_out apuntara a donde debería estar.
+   *
+   * @param p clave a buscar
+   * @param it_out apunta al elemento con esa clave
+   * @return bool de si se encuentra o no
+   */
     bool Esta_Clave(const T &p, typename Diccionario<T,U>::iterator &it_out);
 
 
@@ -213,6 +283,17 @@ public:
      info informacion asociada a la clave que se inserta junto con clave
      el diccionario se supone ordenado, ya que insertar inserta en orden
      */
+    /**
+   * @brief Inserta clave en el diccionario
+   *
+   * Inserta un nuevo registro en el diccionario.
+   * clave clave usada para insertar en el diccionario
+   * info informacion asociada a la clave que se inserta junto con clave
+   * el diccionario se supone ordenado, ya que insertar inserta en orden
+   *
+   * @param clave clave a insertar
+   * @param info info asociada de la clave a insertar
+   */
     void Insertar(const T& clave, const list<U> &info);
 
 
@@ -221,6 +302,16 @@ public:
      La nueva información se inserta al final de la lista de información.
      Si no esta la clave la inserta y añade la informacion asociada.
      */
+    /**
+   * @brief Añade significado a una clave
+   *
+   * Añade una nueva informacion asocida a una clave que está en el diccionario.
+   * La nueva información se inserta al final de la lista de información.
+   * Si no esta la clave la inserta y añade la informacion asociada.
+   *
+   * @param s info a insertar
+   * @param p clave a la que insertar la info
+   */
     void AddSignificado_Palabra(const U & s, const T &p);
 
 
