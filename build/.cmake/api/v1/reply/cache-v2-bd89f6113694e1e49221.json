@@ -1235,7 +1235,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/bin/doxygen][found components: doxygen dot ][v1.16.1()]"
+			"value" : "[/usr/bin/doxygen][found components: doxygen dot ][v1.18.0()]"
 		},
 		{
 			"name" : "tdas_no_lineales_BINARY_DIR",

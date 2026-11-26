@@ -5,5 +5,5 @@ var searchData=
   ['inter_2',['inter',['../classGuia__Tlf.html#a66ae9af47399f6fa1b44204e90531648',1,'Guia_Tlf']]],
   ['interseccion_3',['interseccion',['../classDiccionario.html#aec5d1639a73b97b0b449dda7277b24bb',1,'Diccionario']]],
   ['invariante_20de_20la_20representación_4',['Invariante de la representación',['../repGuia_Tlf.html#invGuia_Tlf',1,'']]],
-  ['iterator_5',['iterator',['../classDiccionario_1_1iterator.html',1,'Diccionario&lt; T, U &gt;::iterator'],['../classDictionary_1_1iterator.html',1,'Dictionary::iterator'],['../classGuia__Tlf_1_1iterator.html',1,'Guia_Tlf::iterator']]]
+  ['iterator_5',['iterator',['../classDiccionario_1_1iterator.html',1,'Diccionario&lt; T, U &gt;::iterator'],['../classDictionary_1_1iterator.html',1,'Dictionary::iterator'],['../classGuia__Tlf_1_1iterator.html',1,'Guia_Tlf::iterator'],['../classDiccionario_1_1iterator.html#a37f6e3ffdb007c1dd6f9ad5b48e1bbf9',1,'Diccionario::iterator::iterator()'],['../classDiccionario_1_1iterator.html#accaabdfed24656a74484d658e2479904',1,'Diccionario::iterator::iterator(const typename list&lt; data&lt; T, U &gt; &gt;::iterator &amp;a)'],['../classDiccionario_1_1iterator.html#a494b92c0ce3df7a29de15e2844d4a525',1,'Diccionario::iterator::iterator(const iterator &amp;a)']]]
 ];

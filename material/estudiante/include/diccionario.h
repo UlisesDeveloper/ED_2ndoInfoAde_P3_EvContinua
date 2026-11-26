@@ -139,85 +139,204 @@ public:
     typename is not a one-time declaration at the top of a class (that's what template <class T, class U> does)—it is a tag you have to stick directly onto every single line where you write SomethingWithT<T, U>::InnerType
     */
 
-
+    /**
+    * @brief clase del iterador para recorrer el diccionario 
+    */
     class iterator{
         //Completar el iterador
         private:
+        /**
+        * @brief iterador de list<data<T,U>> 
+        */
         typename list<data<T, U>>::iterator iterador;
         public:
+        /**
+        * @brief Constructor por defecto (vacio) 
+        */
         iterator(){};
+        /**
+        * @brief Constructor por copia de iterador real que tiene el diccionario
+        * 
+        * @param a iterador a lista de data<T,U>
+        */
         iterator(const typename list<data<T,U>>::iterator &a){
             iterador = a;
         }
+        /**
+        * @brief Constructor por copia de instancia de clase iterator de Diccionario
+        *
+        * @param a iterator de la clase de Diccionario 
+        */
         iterator(const iterator &a){
             iterador = a.iterador;
         }
+        /**
+        * @brief Destructor
+        */
         ~iterator(){}
+        /**
+        * @brief Operador de asignacion mediante instancia de clase iterator de Diccionario
+        * 
+        * 
+        * @param otro iterator de la clase de Diccionario 
+        * @return referenecia a iterator para permitir encadenar asignaciones
+        */
         iterator& operator=(const iterator& otro){
             if(this != &otro){
                 iterador=otro.iterador;
             }
             return *this;
         }
+        /**
+        * @brief Operador de asignacion mediante iterador de list<data<T,U>>
+        * 
+        * 
+        * @param otro iterator de la clase de Diccionario 
+        * @return referenecia a iterator para permitir encadenar asignaciones
+        */
         iterator& operator=(const typename list<data<T,U>>::iterator& otro){
             
                 iterador=otro;
             
             return *this;
         } 
-
+        /**
+        * @brief Operador de referencia 
+        * 
+        * es const porque dentro de la funcion no se modifica nada
+        * 
+        * 
+        * @return referencia al elemento del iterador
+        */
         data<T, U>& operator*() const{
             return *iterador;
         }
-
+        /**
+        * @brief Operador de preaumento en 1
+        * 
+        * Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento
+        * 
+        * @return referencia al iterador
+        */
         iterator& operator++(){
             ++iterador;
             return *this;
         }
-
+        /**
+        * @brief Operador de predecremento en 1
+        * 
+        * Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior
+        * 
+        * @return referencia al iterador
+        */
         iterator& operator--(){
             --iterador;
             return *this;
         }
-
+        /**
+        * @brief Operador de postaumento en 1
+        * 
+        * Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento
+        * 
+        * @param int para que se entienda que es para postaumento
+        * @return referencia al iterador
+        */
         iterator& operator++(int){
             iterador++;
             return *this;
         }
+        /**
+        * @brief Operador de postdecremento en 1
+        * 
+        * Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior
+        * 
+        * @param int para que se entienda que es para postaumento
+        * @return referencia al iterador
+        */
         iterator& operator--(int){
             iterador--;
             return *this;
         }
 
+        /**
+        * @brief Operador de comparacion de desigualdad 
+        * 
+        * 
+        * @param otro iterador de comparacion
+        * @return bool true si se refieren al mismo, false si no 
+        */
         bool operator!=(const iterator& otro) const{
             return otro.iterador != iterador;
         }
 
+        /**
+        * @brief Operador de comparacion de igualdad 
+        * 
+        * 
+        * @param otro iterador de comparacion
+        * @return bool true si se refieren al mismo, false si no 
+        */
         bool operator==(const iterator& otro) const{
             return otro.iterador == iterador;
         }
         friend class Diccionario<T,U>;
 
     };
+    /**
+    * @brief clase del const_iterador para recorrer el diccionario 
+    */
     class const_iterator{
         //Completar el const_iterator
         private:
+        /**
+        * @brief const_iterator de list<data<T,U>> 
+        */
         typename list<data<T, U>>::const_iterator iterador;
         public:
+        /**
+        * @brief Constructor por defecto (vacio) 
+        */
         const_iterator(){};
+        /**
+        * @brief Constructor por copia de const_iterador real que tiene el diccionario
+        * 
+        * @param a const_iterator a lista de data<T,U>
+        */
         const_iterator(const typename list<data<T,U>>::const_iterator &a){
             iterador = a;
         } 
+        /**
+        * @brief Constructor por copia de instancia de clase const_iterator de Diccionario
+        *
+        * @param a const_iterator de la clase de Diccionario 
+        */
         const_iterator(const const_iterator &a){
             iterador = a.iterador;
         }
+        /**
+        * @brief Destructor
+        */
         ~const_iterator(){}
+        /**
+        * @brief Operador de asignacion mediante instancia de clase const_iterator de Diccionario
+        * 
+        * 
+        * @param otro const_iterator de la clase de Diccionario 
+        * @return referenecia a const_iterator para permitir encadenar asignaciones
+        */
         const_iterator& operator=(const const_iterator& otro){
             if(this != &otro){
                 iterador=otro.iterador;
             }
             return *this;
         }
+        /**
+        * @brief Operador de asignacion mediante const_iterador de list<data<T,U>>
+        * 
+        * 
+        * @param otro const_iterator de la clase de Diccionario 
+        * @return referenecia a const_iterator para permitir encadenar asignaciones
+        */
         const_iterator& operator=(const typename list<data<T,U>>::const_iterator& otro){
             
             iterador=otro;
@@ -225,33 +344,85 @@ public:
             return *this;
         } 
 
+        /**
+        * @brief Operador de referencia 
+        * 
+        * es const porque dentro de la funcion no se modifica nada
+        * y const el dato de retorno para que no se permita la modificacion
+        * 
+        * @return referencia constante al elemento del iterador
+        */
         const data<T, U>& operator*() const{
             return *iterador;
         }
 
+        /**
+        * @brief Operador de preaumento en 1
+        * 
+        * Aumenta en 1 el const_iterator para que apunte/se refiera al siguiente elemento
+        * 
+        * @return referencia al const_iterator
+        */
         const_iterator& operator++(){
             ++iterador;
             return *this;
         }
 
+        /**
+        * @brief Operador de predecremento en 1
+        * 
+        * Decrementa en 1 el const_iterador para que apunte/se refiera al elemento anterior
+        * 
+        * @return referencia al const_iterador
+        */
         const_iterator& operator--(){
             --iterador;
             return *this;
         }
 
+        /**
+        * @brief Operador de postaumento en 1
+        * 
+        * Aumenta en 1 el const_iterador para que apunte/se refiera al siguiente elemento
+        * 
+        * @param int para que se entienda que es para postaumento
+        * @return referencia al const_iterador
+        */
         const_iterator& operator++(int){
             iterador++;
             return *this;
         }
+        /**
+        * @brief Operador de postdecremento en 1
+        * 
+        * Decrementa en 1 el const_iterador para que apunte/se refiera al elemento anterior
+        * 
+        * @param int para que se entienda que es para postaumento
+        * @return referencia al const_iterador
+        */
         const_iterator& operator--(int){
             iterador--;
             return *this;
         }
 
+        /**
+        * @brief Operador de comparacion de desigualdad 
+        * 
+        * 
+        * @param otro const_iterador de comparacion
+        * @return bool true si se refieren al mismo, false si no 
+        */
         bool operator!=(const const_iterator& otro) const{
             return otro.iterador != iterador;
         }
 
+        /**
+        * @brief Operador de comparacion de igualdad 
+        * 
+        * 
+        * @param otro const_iterador de comparacion
+        * @return bool true si se refieren al mismo, false si no 
+        */
         bool operator==(const const_iterator& otro) const{
             return otro.iterador == iterador;
         }
@@ -319,13 +490,28 @@ public:
      Devuelve la información (una lista) asociada a una clave p.
      devuelve una lista con la informacion asociada a la clave.
      */
-
+    /**
+   * @brief Nos devuelve la info asociada de una clave
+   *
+   * Devuelve la información (una lista) asociada a una clave p.
+   * devuelve una lista con la informacion asociada a la clave.
+   *
+   * @param p clave de la que sacar la informacion asociada
+   * @return list<U> con la informacion asociada de la clave
+   */
     list<U> getInfo_Asoc(const T & p);
 
     /**
      Devuelve el tamaño del diccionario
      tamaño del diccionario
      */
+    /**
+   * @brief Tamaño del diccionario
+   *
+   * Devuelve el tamaño del diccionario tamaño del diccionario
+   *
+   * @return int con num de entradas en el diccionario
+   */
     int size()const;
 
 
@@ -334,6 +520,16 @@ public:
      c es la clave cuyo elemento queremos borrar. Devuelve
      true si se ha borrado el elemento, false si no
      */
+    /**
+   * @brief Borrado de una entrada por la clave
+   *
+   * borra un data del diccionario por su clave
+   * c es la clave cuyo elemento queremos borrar. Devuelve
+   * true si se ha borrado el elemento, false si no
+   *
+   * @param c clave de la entrada a borrar
+   * @return bool si se ha borrado o si no el elemento de la clave del parametro
+   */
     bool Borrar(const T & c);
 
     /**
@@ -341,18 +537,46 @@ public:
      Si una clave aparece en ambos diccionarios en el resultante aparece una sola vez con la union
      de las informaciones asociadas.
      */
+    /**
+   * @brief union logica de diccionarios
+   *
+   * Union de 2 diccionarios
+   * Si una clave aparece en ambos diccionarios en el resultante aparece una sola vez con la union
+   * de las informaciones asociadas.
+   *
+   * @param D Diccionario al que unir con la instancia actual
+   * @return Diccionario resultante de la union del parametro y de la instancia actual
+   */
     Diccionario union_d(const Diccionario & D);
 
     /**
      elimina las claves del diccionario que aprecen en D
      D diccionario cuyas claves queremos eliminar
      */
+    /**
+   * @brief diferencia logica de diccionarios
+   *
+   * elimina las claves del diccionario que aprecen en D
+   * D diccionario cuyas claves queremos eliminar
+   *
+   * @param D Diccionario al que hacer la diferencia con la instancia actual
+   * @return Diccionario resultante de la diferencia del parametro y de la instancia actual
+   */
     Diccionario diferencia(const Diccionario &D);
 
     /**
      Interssecion d 2 diccionarios;
      diccionario con el que se interseca
      */
+    /**
+   * @brief interseccion logica de diccionarios
+   *
+   * Interssecion d 2 diccionarios;
+   * diccionario con el que se interseca
+   *
+   * @param D Diccionario al que hacer la interseccion con la instancia actual
+   * @return Diccionario resultante de la interseccion del parametro y de la instancia actual
+   */
     Diccionario interseccion(const Diccionario & D);
 
 
@@ -361,18 +585,45 @@ public:
      * 	intervalo [i,f)
 
      */
-
+    /**
+   * @brief obtener diccionario de un rango de entradas en la instancia actual
+   *
+   * Devuelve un diccionario con las claves en el
+   * intervalo [i,f)
+   *
+   * @param i Clave del elemento del rango inferior [
+   * @param f Clave del elemento del rango inferior )
+   * @return Diccionario resultante del rango establecido por los parametros sobre la instancia actual
+   */
     Diccionario Devolver_rango(const T &i, const T & f);
 
 
     /** Funciones begin y end para los iteradores**/
-
+    /**
+   * @brief funcion begin del iterador no const
+   *
+   * @return iterator apuntando al principio 
+   */
     iterator begin();
 
+    /**
+   * @brief funcion end del iterador no const
+   *
+   * @return iterator apuntando a elemento por encima del final
+   */
     iterator end();
-
+    /**
+   * @brief funcion begin del iterador const
+   *
+   * @return const_iterator apuntando al principio
+   */
     const_iterator begin() const;
 
+     /**
+   * @brief funcion end del iterador const
+   *
+   * @return const_iterator apuntando a elemento por encima del final
+   */
     const_iterator end() const;
 
 };
