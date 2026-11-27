@@ -51,6 +51,12 @@ bool operator<(const data<T, U> &d1, const data <T, U>&d2) {
 }
 
 
+
+/**
+ * @brief Diccionario de lista
+ * @details lo almacena con una lista las entradas del struct data<T,U>
+ */
+
 template <class T, class U>
 class Diccionario {
 private:
@@ -263,7 +269,7 @@ public:
         * 
         * 
         * @param otro iterador de comparacion
-        * @return bool true si se refieren al mismo, false si no 
+        * @return bool true si son distintos, false si son los mismos
         */
         bool operator!=(const iterator& otro) const{
             return otro.iterador != iterador;
@@ -410,7 +416,7 @@ public:
         * 
         * 
         * @param otro const_iterador de comparacion
-        * @return bool true si se refieren al mismo, false si no 
+        * @return bool true si son distintos, false si son los mismos
         */
         bool operator!=(const const_iterator& otro) const{
             return otro.iterador != iterador;

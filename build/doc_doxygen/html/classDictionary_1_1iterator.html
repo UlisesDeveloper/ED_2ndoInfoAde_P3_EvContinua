@@ -111,32 +111,408 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classDictionar
   <div class="headertitle"><div class="title">Dictionary::iterator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>clase del iterador para recorrer el diccionario  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="dictionary_8h_source.html">dictionary.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adcf6fa16b49ce3d3e09214e9b37c15eb" id="r_adcf6fa16b49ce3d3e09214e9b37c15eb"><td class="memItemLeft"><a id="adcf6fa16b49ce3d3e09214e9b37c15eb" name="adcf6fa16b49ce3d3e09214e9b37c15eb"></a>
-&#160;</td><td class="memItemRight"><b>iterator</b> (const set&lt; string &gt;::iterator &amp;otro)</td></tr>
-<tr class="memitem:ad4d8095db4e40e3a9fc267c2b72ca077" id="r_ad4d8095db4e40e3a9fc267c2b72ca077"><td class="memItemLeft"><a id="ad4d8095db4e40e3a9fc267c2b72ca077" name="ad4d8095db4e40e3a9fc267c2b72ca077"></a>
-&#160;</td><td class="memItemRight"><b>iterator</b> (const iterator &amp;otro)</td></tr>
-<tr class="memitem:a78fe30a95bb58f1ba71234aa64ea9c4f" id="r_a78fe30a95bb58f1ba71234aa64ea9c4f"><td class="memItemLeft"><a id="a78fe30a95bb58f1ba71234aa64ea9c4f" name="a78fe30a95bb58f1ba71234aa64ea9c4f"></a>
-iterator &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const set&lt; string &gt;::iterator &amp;otro)</td></tr>
-<tr class="memitem:a436913fe8acd8be00732822bbeab6358" id="r_a436913fe8acd8be00732822bbeab6358"><td class="memItemLeft"><a id="a436913fe8acd8be00732822bbeab6358" name="a436913fe8acd8be00732822bbeab6358"></a>
-iterator &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const iterator &amp;otro)</td></tr>
-<tr class="memitem:a6eec5363a48f33ebdc059fa9aa91a793" id="r_a6eec5363a48f33ebdc059fa9aa91a793"><td class="memItemLeft"><a id="a6eec5363a48f33ebdc059fa9aa91a793" name="a6eec5363a48f33ebdc059fa9aa91a793"></a>
-string&#160;</td><td class="memItemRight"><b>operator*</b> () const</td></tr>
-<tr class="memitem:a6985bf511525e338dd1bb2239e2e3d12" id="r_a6985bf511525e338dd1bb2239e2e3d12"><td class="memItemLeft"><a id="a6985bf511525e338dd1bb2239e2e3d12" name="a6985bf511525e338dd1bb2239e2e3d12"></a>
-iterator &amp;&#160;</td><td class="memItemRight"><b>operator++</b> ()</td></tr>
-<tr class="memitem:a6b2085d197a4a6008c619f1acd250f75" id="r_a6b2085d197a4a6008c619f1acd250f75"><td class="memItemLeft"><a id="a6b2085d197a4a6008c619f1acd250f75" name="a6b2085d197a4a6008c619f1acd250f75"></a>
-iterator &amp;&#160;</td><td class="memItemRight"><b>operator--</b> ()</td></tr>
-<tr class="memitem:af7579ff5b0a68d44696f9e0a6d26f20c" id="r_af7579ff5b0a68d44696f9e0a6d26f20c"><td class="memItemLeft"><a id="af7579ff5b0a68d44696f9e0a6d26f20c" name="af7579ff5b0a68d44696f9e0a6d26f20c"></a>
-iterator &amp;&#160;</td><td class="memItemRight"><b>operator++</b> (int)</td></tr>
-<tr class="memitem:af4e14e69ea254d905c32318024a89e4b" id="r_af4e14e69ea254d905c32318024a89e4b"><td class="memItemLeft"><a id="af4e14e69ea254d905c32318024a89e4b" name="af4e14e69ea254d905c32318024a89e4b"></a>
-iterator &amp;&#160;</td><td class="memItemRight"><b>operator--</b> (int)</td></tr>
-<tr class="memitem:a6c60e955cac2d355061d885b829881df" id="r_a6c60e955cac2d355061d885b829881df"><td class="memItemLeft"><a id="a6c60e955cac2d355061d885b829881df" name="a6c60e955cac2d355061d885b829881df"></a>
-bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const iterator &amp;otro)</td></tr>
-<tr class="memitem:a96c083946860fdad0d72add166bba757" id="r_a96c083946860fdad0d72add166bba757"><td class="memItemLeft"><a id="a96c083946860fdad0d72add166bba757" name="a96c083946860fdad0d72add166bba757"></a>
-bool&#160;</td><td class="memItemRight"><b>operator==</b> (const iterator &amp;otro)</td></tr>
+<tr class="memitem:a916e7d7bf8d9b5377e16c34726251cbf" id="r_a916e7d7bf8d9b5377e16c34726251cbf"><td class="memItemLeft"><a id="a916e7d7bf8d9b5377e16c34726251cbf" name="a916e7d7bf8d9b5377e16c34726251cbf"></a>
+&#160;</td><td class="memItemRight"><b>iterator</b> ()</td></tr>
+<tr class="memdesc:a916e7d7bf8d9b5377e16c34726251cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto (vacio). <br /></td></tr>
+<tr class="memitem:adcf6fa16b49ce3d3e09214e9b37c15eb" id="r_adcf6fa16b49ce3d3e09214e9b37c15eb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adcf6fa16b49ce3d3e09214e9b37c15eb">iterator</a> (const set&lt; string &gt;::iterator &amp;otro)</td></tr>
+<tr class="memdesc:adcf6fa16b49ce3d3e09214e9b37c15eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por copia de iterador real que tiene el diccionario.  <br /></td></tr>
+<tr class="memitem:ad4d8095db4e40e3a9fc267c2b72ca077" id="r_ad4d8095db4e40e3a9fc267c2b72ca077"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad4d8095db4e40e3a9fc267c2b72ca077">iterator</a> (const iterator &amp;otro)</td></tr>
+<tr class="memdesc:ad4d8095db4e40e3a9fc267c2b72ca077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por copia de instancia de clase iterator de <a class="el" href="classDictionary.html" title="TDA Dictionary.">Dictionary</a>.  <br /></td></tr>
+<tr class="memitem:aa042f8c1520d1eaacf9e15286464eb58" id="r_aa042f8c1520d1eaacf9e15286464eb58"><td class="memItemLeft"><a id="aa042f8c1520d1eaacf9e15286464eb58" name="aa042f8c1520d1eaacf9e15286464eb58"></a>
+&#160;</td><td class="memItemRight"><b>~iterator</b> ()</td></tr>
+<tr class="memdesc:aa042f8c1520d1eaacf9e15286464eb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memitem:a78fe30a95bb58f1ba71234aa64ea9c4f" id="r_a78fe30a95bb58f1ba71234aa64ea9c4f"><td class="memItemLeft"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a78fe30a95bb58f1ba71234aa64ea9c4f">operator=</a> (const set&lt; string &gt;<a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">::iterator</a> &amp;otro)</td></tr>
+<tr class="memdesc:a78fe30a95bb58f1ba71234aa64ea9c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de asignacion mediante iterador de set&lt;string&gt;.  <br /></td></tr>
+<tr class="memitem:a436913fe8acd8be00732822bbeab6358" id="r_a436913fe8acd8be00732822bbeab6358"><td class="memItemLeft"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a436913fe8acd8be00732822bbeab6358">operator=</a> (const <a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;otro)</td></tr>
+<tr class="memdesc:a436913fe8acd8be00732822bbeab6358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de asignacion mediante instancia de clase iterator de <a class="el" href="classDictionary.html" title="TDA Dictionary.">Dictionary</a>.  <br /></td></tr>
+<tr class="memitem:a6eec5363a48f33ebdc059fa9aa91a793" id="r_a6eec5363a48f33ebdc059fa9aa91a793"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a6eec5363a48f33ebdc059fa9aa91a793">operator*</a> () const</td></tr>
+<tr class="memdesc:a6eec5363a48f33ebdc059fa9aa91a793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de referencia.  <br /></td></tr>
+<tr class="memitem:a6985bf511525e338dd1bb2239e2e3d12" id="r_a6985bf511525e338dd1bb2239e2e3d12"><td class="memItemLeft"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6985bf511525e338dd1bb2239e2e3d12">operator++</a> ()</td></tr>
+<tr class="memdesc:a6985bf511525e338dd1bb2239e2e3d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de preaumento en 1.  <br /></td></tr>
+<tr class="memitem:a6b2085d197a4a6008c619f1acd250f75" id="r_a6b2085d197a4a6008c619f1acd250f75"><td class="memItemLeft"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6b2085d197a4a6008c619f1acd250f75">operator--</a> ()</td></tr>
+<tr class="memdesc:a6b2085d197a4a6008c619f1acd250f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de predecremento en 1.  <br /></td></tr>
+<tr class="memitem:af7579ff5b0a68d44696f9e0a6d26f20c" id="r_af7579ff5b0a68d44696f9e0a6d26f20c"><td class="memItemLeft"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af7579ff5b0a68d44696f9e0a6d26f20c">operator++</a> (int)</td></tr>
+<tr class="memdesc:af7579ff5b0a68d44696f9e0a6d26f20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de postaumento en 1.  <br /></td></tr>
+<tr class="memitem:af4e14e69ea254d905c32318024a89e4b" id="r_af4e14e69ea254d905c32318024a89e4b"><td class="memItemLeft"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af4e14e69ea254d905c32318024a89e4b">operator--</a> (int)</td></tr>
+<tr class="memdesc:af4e14e69ea254d905c32318024a89e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de postdecremento en 1.  <br /></td></tr>
+<tr class="memitem:a6c60e955cac2d355061d885b829881df" id="r_a6c60e955cac2d355061d885b829881df"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6c60e955cac2d355061d885b829881df">operator!=</a> (const <a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;otro)</td></tr>
+<tr class="memdesc:a6c60e955cac2d355061d885b829881df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de comparacion de desigualdad.  <br /></td></tr>
+<tr class="memitem:a96c083946860fdad0d72add166bba757" id="r_a96c083946860fdad0d72add166bba757"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a96c083946860fdad0d72add166bba757">operator==</a> (const <a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;otro)</td></tr>
+<tr class="memdesc:a96c083946860fdad0d72add166bba757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de comparacion de igualdad.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>clase del iterador para recorrer el diccionario </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adcf6fa16b49ce3d3e09214e9b37c15eb" name="adcf6fa16b49ce3d3e09214e9b37c15eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf6fa16b49ce3d3e09214e9b37c15eb">&#9670;&#160;</a></span>iterator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary::iterator::iterator </td>
+          <td>(</td>
+          <td class="paramtype">const set&lt; string &gt;::iterator &amp;</td>          <td class="paramname"><span class="paramname"><em>otro</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor por copia de iterador real que tiene el diccionario. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otro</td><td>iterador a set&lt;string&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4d8095db4e40e3a9fc267c2b72ca077" name="ad4d8095db4e40e3a9fc267c2b72ca077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d8095db4e40e3a9fc267c2b72ca077">&#9670;&#160;</a></span>iterator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary::iterator::iterator </td>
+          <td>(</td>
+          <td class="paramtype">const iterator &amp;</td>          <td class="paramname"><span class="paramname"><em>otro</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor por copia de instancia de clase iterator de <a class="el" href="classDictionary.html" title="TDA Dictionary.">Dictionary</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otro</td><td>iterator de la clase de <a class="el" href="classDictionary.html" title="TDA Dictionary.">Dictionary</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a6c60e955cac2d355061d885b829881df" name="a6c60e955cac2d355061d885b829881df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c60e955cac2d355061d885b829881df">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Dictionary::iterator::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>otro</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de comparacion de desigualdad. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otro</td><td>iterador de comparacion </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd>
+<dd>
+bool true si son distintos, false si son los mismos </dd></dl>
+
+</div>
+</div>
+<a id="a6eec5363a48f33ebdc059fa9aa91a793" name="a6eec5363a48f33ebdc059fa9aa91a793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eec5363a48f33ebdc059fa9aa91a793">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Dictionary::iterator::operator* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de referencia. </p>
+<p>es const porque dentro de la funcion no se modifica nada</p>
+<dl class="section return"><dt>Returns</dt><dd>elemento al que apunta el iterador </dd></dl>
+
+</div>
+</div>
+<a id="a6985bf511525e338dd1bb2239e2e3d12" name="a6985bf511525e338dd1bb2239e2e3d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6985bf511525e338dd1bb2239e2e3d12">&#9670;&#160;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp; Dictionary::iterator::operator++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de preaumento en 1. </p>
+<p>Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento</p>
+<dl class="section return"><dt>Returns</dt><dd>referencia al iterador </dd></dl>
+
+</div>
+</div>
+<a id="af7579ff5b0a68d44696f9e0a6d26f20c" name="af7579ff5b0a68d44696f9e0a6d26f20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7579ff5b0a68d44696f9e0a6d26f20c">&#9670;&#160;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp; Dictionary::iterator::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de postaumento en 1. </p>
+<p>Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>para que se entienda que es para postaumento </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>referencia al iterador </dd></dl>
+
+</div>
+</div>
+<a id="a6b2085d197a4a6008c619f1acd250f75" name="a6b2085d197a4a6008c619f1acd250f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b2085d197a4a6008c619f1acd250f75">&#9670;&#160;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp; Dictionary::iterator::operator-- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de predecremento en 1. </p>
+<p>Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior</p>
+<dl class="section return"><dt>Returns</dt><dd>referencia al iterador </dd></dl>
+
+</div>
+</div>
+<a id="af4e14e69ea254d905c32318024a89e4b" name="af4e14e69ea254d905c32318024a89e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e14e69ea254d905c32318024a89e4b">&#9670;&#160;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp; Dictionary::iterator::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de postdecremento en 1. </p>
+<p>Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>para que se entienda que es para postaumento </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>referencia al iterador </dd></dl>
+
+</div>
+</div>
+<a id="a436913fe8acd8be00732822bbeab6358" name="a436913fe8acd8be00732822bbeab6358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a436913fe8acd8be00732822bbeab6358">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp; Dictionary::iterator::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>otro</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de asignacion mediante instancia de clase iterator de <a class="el" href="classDictionary.html" title="TDA Dictionary.">Dictionary</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otro</td><td>iterator de la clase de <a class="el" href="classDictionary.html" title="TDA Dictionary.">Dictionary</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>referencia a iterator para permitir encadenar asignaciones </dd></dl>
+
+</div>
+</div>
+<a id="a78fe30a95bb58f1ba71234aa64ea9c4f" name="a78fe30a95bb58f1ba71234aa64ea9c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78fe30a95bb58f1ba71234aa64ea9c4f">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp; Dictionary::iterator::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const set&lt; string &gt;<a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">::iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>otro</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de asignacion mediante iterador de set&lt;string&gt;. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otro</td><td>iterator de set&lt;string&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>referencia a iterator para permitir encadenar asignaciones </dd></dl>
+
+</div>
+</div>
+<a id="a96c083946860fdad0d72add166bba757" name="a96c083946860fdad0d72add166bba757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c083946860fdad0d72add166bba757">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Dictionary::iterator::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a916e7d7bf8d9b5377e16c34726251cbf">iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>otro</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de comparacion de igualdad. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otro</td><td>iterador de comparacion </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool true si se refieren al mismo, false si no </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="dictionary_8h_source.html">dictionary.h</a></li>
 </ul>

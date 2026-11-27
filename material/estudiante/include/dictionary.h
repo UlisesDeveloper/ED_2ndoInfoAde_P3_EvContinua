@@ -143,45 +143,208 @@ public:
    */
   friend ostream& operator<<(ostream &os, const Dictionary &dic);
 
+  /**
+    * @brief clase del iterador para recorrer el diccionario 
+  */
   class iterator{
   private:
+    /**
+    * @brief iterador de set<string>
+    */
     set<string>::iterator it;
   public:
+    /**
+    * @brief Constructor por defecto (vacio)
+    */
     iterator(){}
+    /**
+    * @brief Constructor por copia de iterador real que tiene el diccionario
+    *
+    * @param otro iterador a set<string>
+    */
     iterator(const set<string>::iterator& otro):it(otro){}
+    /**
+    * @brief Constructor por copia de instancia de clase iterator de Dictionary
+    *
+    * @param otro iterator de la clase de Dictionary
+    */
     iterator(const iterator& otro):it(otro.it){}
+    /**
+    * @brief Destructor
+    */
     ~iterator(){}
+    /**
+    * @brief Operador de asignacion mediante iterador de set<string>
+    *
+    * @param otro iterator de set<string>
+    * @return referencia a iterator para permitir encadenar asignaciones
+    */
     iterator& operator=(const set<string>::iterator& otro){it=otro;return *this;}
+    /**
+    * @brief Operador de asignacion mediante instancia de clase iterator de Dictionary
+    *
+    * @param otro iterator de la clase de Dictionary
+    * @return referencia a iterator para permitir encadenar asignaciones
+    */
     iterator& operator=(const iterator& otro){it=otro.it;return *this;}
+    /**
+    * @brief Operador de referencia
+    *
+    * es const porque dentro de la funcion no se modifica nada
+    *
+    * @return elemento al que apunta el iterador
+    */
     string operator*()const{return *it;}
+    /**
+    * @brief Operador de preaumento en 1
+    *
+    * Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento
+    *
+    * @return referencia al iterador
+    */
     iterator& operator++(){++it;return *this;}
+    /**
+    * @brief Operador de predecremento en 1
+    *
+    * Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior
+    *
+    * @return referencia al iterador
+    */
     iterator& operator--(){--it;return *this;}
+    /**
+    * @brief Operador de postaumento en 1
+    *
+    * Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento
+    *
+    * @param int para que se entienda que es para postaumento
+    * @return referencia al iterador
+    */
     iterator& operator++(int){it++;return *this;}
+    /**
+    * @brief Operador de postdecremento en 1
+    *
+    * Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior
+    *
+    * @param int para que se entienda que es para postaumento
+    * @return referencia al iterador
+    */
     iterator& operator--(int){it--;return *this;}
+    /**
+    * @brief Operador de comparacion de desigualdad
+    *
+    * @param otro iterador de comparacion
+    * @return @return bool true si son distintos, false si son los mismos
+    */
     bool operator!=(const iterator& otro){return it != otro.it;}
+    /**
+    * @brief Operador de comparacion de igualdad
+    *
+    * @param otro iterador de comparacion
+    * @return bool true si se refieren al mismo, false si no
+    */
     bool operator==(const iterator& otro){return it == otro.it;}
   };
 
   /**
-   * @brief Class const_iterator
-   * @details Se hace para poder iterar sobre los elementos de tipo LettersSet que sean constantes
+   * @brief clase del const_iterador para recorrer el dictionary
    */
   class const_iterator{
   private:
+    /**
+    * @brief const_iterator de set<string>
+    */
     set<string>::const_iterator const_it;
   public:
+    /**
+    * @brief Constructor por defecto (vacio)
+    */
     const_iterator(){}
+    /**
+    * @brief Constructor por copia de const_iterador real que tiene el diccionario
+    *
+    * @param otro const_iterator a set<string>
+    */
     const_iterator(const set<string>::const_iterator& otro):const_it(otro){}
+    /**
+    * @brief Constructor por copia de instancia de clase const_iterator de Dictionary
+    *
+    * @param otro const_iterator de la clase de Dictionary
+    */
     const_iterator(const const_iterator& otro):const_it(otro.const_it){}
+    /**
+    * @brief Destructor
+    */
     ~const_iterator(){}
+    /**
+    * @brief Operador de asignacion mediante const_iterator de set<string>
+    *
+    * @param otro const_iterator de set<string>
+    * @return referencia a const_iterator para permitir encadenar asignaciones
+    */
     const_iterator& operator=(const set<string>::const_iterator& otro){const_it = otro;return *this;}
+    /**
+    * @brief Operador de asignacion mediante instancia de clase const_iterator de Dictionary
+    *
+    * @param otro const_iterator de la clase de Dictionary
+    * @return referencia a const_iterator para permitir encadenar asignaciones
+    */
     const_iterator& operator=(const const_iterator& otro){const_it = otro.const_it;return *this;}
+    /**
+    * @brief Operador de referencia
+    *
+    * es const porque dentro de la funcion no se modifica nada
+    * y const el dato de retorno para que no se permita la modificacion
+    *
+    * @return elemento al que apunta el const_iterator
+    */
     const string operator*()const{return *const_it;}
+    /**
+    * @brief Operador de preaumento en 1
+    *
+    * Aumenta en 1 el const_iterator para que apunte/se refiera al siguiente elemento
+    *
+    * @return referencia al const_iterator
+    */
     const_iterator& operator++(){++const_it;return *this;}
+    /**
+    * @brief Operador de predecremento en 1
+    *
+    * Decrementa en 1 el const_iterador para que apunte/se refiera al elemento anterior
+    *
+    * @return referencia al const_iterador
+    */
     const_iterator& operator--(){--const_it;return *this;}
+    /**
+    * @brief Operador de postaumento en 1
+    *
+    * Aumenta en 1 el const_iterador para que apunte/se refiera al siguiente elemento
+    *
+    * @param int para que se entienda que es para postaumento
+    * @return referencia al const_iterador
+    */
     const_iterator& operator++(int){const_it++;return *this;}
+    /**
+    * @brief Operador de postdecremento en 1
+    *
+    * Decrementa en 1 el const_iterador para que apunte/se refiera al elemento anterior
+    *
+    * @param int para que se entienda que es para postaumento
+    * @return referencia al const_iterador
+    */
     const_iterator& operator--(int){const_it--;return *this;}
+    /**
+    * @brief Operador de comparacion de desigualdad
+    *
+    * @param otro const_iterador de comparacion
+    * @return bool true si son distintos, false si son los mismos
+    */
     bool operator!=(const const_iterator& otro){return const_it != otro.const_it;}
+    /**
+    * @brief Operador de comparacion de igualdad
+    *
+    * @param otro const_iterador de comparacion
+    * @return bool true si se refieren al mismo, false si no
+    */
     bool operator==(const const_iterator& otro){return const_it == otro.const_it;}
   };
 
@@ -192,8 +355,27 @@ public:
 
 };
 
-
+/**
+   * @brief Sobrecarga del operador de entrada
+   *
+   * Permite leer las palabras de un fichero de texto e introducirlas en el
+   * diccionario
+   *
+   * @param is Flujo de entrada
+   * @param dic Diccionario a rellenar
+   * @return Flujo de entrada para poder encadenar el operador
+   */
 istream& operator>>(istream &is, Dictionary &dic);
+
+/**
+   * @brief Sobrecarga del operador de salida
+   *
+   * Permite imprimir el diccionario completo a un flujo de salida
+   *
+   * @param os Flujo de salida, donde imprimir el diccionario
+   * @param dic Diccionario a imprimir
+   * @return Flujo de salida, para poder encadenar el operador
+   */
 ostream& operator<<(ostream &os, const Dictionary &dic);
 
 #endif

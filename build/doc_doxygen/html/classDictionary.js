@@ -1,7 +1,7 @@
 var classDictionary =
 [
-    [ "iterator", "classDictionary_1_1iterator.html", null ],
-    [ "const_iterator", "classDictionary_1_1const__iterator.html", null ],
+    [ "iterator", "classDictionary_1_1iterator.html", "classDictionary_1_1iterator" ],
+    [ "const_iterator", "classDictionary_1_1const__iterator.html", "classDictionary_1_1const__iterator" ],
     [ "Dictionary", "classDictionary.html#aee8d612bc9d323c38faba045ba384b8b", null ],
     [ "Dictionary", "classDictionary.html#a408e2c9dfcea8f536666b89fed403074", null ],
     [ "~Dictionary", "classDictionary.html#aa36f24073d9c9001768517aa2322cb82", null ],

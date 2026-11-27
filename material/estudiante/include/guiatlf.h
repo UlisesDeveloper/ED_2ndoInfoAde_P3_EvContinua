@@ -47,6 +47,7 @@ class Guia_Tlf{
 private:
 	map<string,string> datos; //si admites que haya nombres repetidos tendrías que usar un
 					     //multimap
+               //dice que no puede haber repetidos nombres
 
 public:
 
@@ -59,7 +60,13 @@ public:
   // los telefonos asociados a dicho nombre
 string & operator[](const string &nombre);
 
-//Otra version Con iteradores
+//Otra version Con iteradores, supongo que sin modificar
+
+/**
+  @brief Acceso a un elemento sin crearlo en caso de que no exista 
+  @param nombre: nombre del elemento  elemento acceder
+  @return devuelve el valor asociado a un nombre, es decir el teléfono
+  */
 string  gettelefono(const string & nombre);
 
   /**
@@ -173,13 +180,117 @@ friend ostream & operator<<(ostream & os, Guia_Tlf & g);
   */
 friend istream & operator>>(istream & is, Guia_Tlf & g);
 
+/**
+ * 
+ * @brief lectura de pareja de strigns
+ * @param is flujo de entrada.
+ * @param d par de datos al que escribir de entrada
+ * 
+ * @details no es de la clase directamente pero podria ser util por eso esta como friend
+ * @return flujo de entrada
+ */
+friend istream & operator>>(istream &is,pair<string,string> &d);
+
   /**
   * @brief clase para iterar sobre la guia
   * */
 class iterator{
    private:
-
-   public:
+    /**
+    * @brief iterador de map<string,string>
+    */
+    map<string,string>::iterator it;
+  public:
+    /**
+    * @brief Constructor por defecto (vacio)
+    */
+    iterator(){}
+    /**
+    * @brief Constructor por copia de iterador real que tiene el datos de guiatlf
+    *
+    * @param otro iterador a map<string,string>
+    */
+    iterator(const map<string,string>::iterator& otro):it(otro){}
+    /**
+    * @brief Constructor por copia de instancia de clase iterator de guiatlf
+    *
+    * @param otro iterator de la clase de Guia_Tlf
+    */
+    iterator(const iterator& otro):it(otro.it){}
+    /**
+    * @brief Destructor
+    */
+    ~iterator(){}
+    /**
+    * @brief Operador de asignacion mediante iterador de map<string,string>
+    *
+    * @param otro iterator de map<string,string>
+    * @return referencia a iterator para permitir encadenar asignaciones
+    */
+    iterator& operator=(const map<string,string>::iterator& otro){it=otro;return *this;}
+    /**
+    * @brief Operador de asignacion mediante instancia de clase iterator de Dictionary
+    *
+    * @param otro iterator de la clase de Dictionary
+    * @return referencia a iterator para permitir encadenar asignaciones
+    */
+    iterator& operator=(const iterator& otro){it=otro.it;return *this;}
+    /**
+    * @brief Operador de referencia
+    *
+    * es const porque dentro de la funcion no se modifica nada
+    *
+    * @return par de string constante de la key y del value la otra string
+    */
+    pair<const string, string>& operator*() const {return *it;}
+    /**
+    * @brief Operador de preaumento en 1
+    *
+    * Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento
+    *
+    * @return referencia al iterador
+    */
+    iterator& operator++(){++it;return *this;}
+    /**
+    * @brief Operador de predecremento en 1
+    *
+    * Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior
+    *
+    * @return referencia al iterador
+    */
+    iterator& operator--(){--it;return *this;}
+    /**
+    * @brief Operador de postaumento en 1
+    *
+    * Aumenta en 1 el iterador para que apunte/se refiera al siguiente elemento
+    *
+    * @param int para que se entienda que es para postaumento
+    * @return referencia al iterador
+    */
+    iterator& operator++(int){it++;return *this;}
+    /**
+    * @brief Operador de postdecremento en 1
+    *
+    * Decrementa en 1 el iterador para que apunte/se refiera al elemento anterior
+    *
+    * @param int para que se entienda que es para postaumento
+    * @return referencia al iterador
+    */
+    iterator& operator--(int){it--;return *this;}
+    /**
+    * @brief Operador de comparacion de desigualdad
+    *
+    * @param otro iterador de comparacion
+    * @return bool true si son distintos, false si son los mismos
+    */
+    bool operator!=(const iterator& otro) const {return it != otro.it;}
+    /**
+    * @brief Operador de comparacion de igualdad
+    *
+    * @param otro iterador de comparacion
+    * @return bool true si se refieren al mismo, false si no
+    */
+    bool operator==(const iterator& otro) const {return it == otro.it;}
 };
 
   /**
@@ -196,5 +307,33 @@ iterator  end();
 
 
 }; //del class Guia_Tlf
+
+
+/**
+  @brief Escritura de la guia de telefonos
+  @param os: flujo de salida. Es MODIFICADO
+  @param g: guia de telefonos que se escribe
+  @return el flujo de salida
+  */
+ostream & operator<<(ostream & os, Guia_Tlf & g);
+/**
+  @brief Lectura de  la guia de telefonos
+  @param is: flujo de entrada. ES MODIFICADO
+  @param g: guia de telefonos. ES MODIFICADO
+  @return el flujo de entrada
+  */
+istream & operator>>(istream & is, Guia_Tlf & g);
+
+/**
+ * 
+ * @brief lectura de pareja de strigns
+ * @param is flujo de entrada.
+ * @param d par de datos al que escribir de entrada
+ * 
+ * @details no es de la clase directamente pero podria ser util por eso esta como friend
+ * @return flujo de entrada
+ */
+istream & operator>>(istream 
+&is,pair<string,string> &d);
 #endif
 
